@@ -1,0 +1,208 @@
+<html lang="pt-br">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Sobre</title>
+    <style>
+      body{
+         background-image: url(background.jpg);
+         text-align: center;
+         font-family: 'Poppins', sans-serif; 
+         }  
+          
+      .iniciar{
+          padding: 15px;   
+          text-align: center;
+
+          }
+
+      .texto{
+          text-align: justify;          
+          padding-left: 20px;
+          padding-right: 20px;
+
+          }
+
+      .fotos{
+        image-wi
+      }
+
+      .redes{
+          padding: 30px;
+         
+          }
+      .item{
+       text-align:  center;
+      
+      }
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+      .slideshow-container {
+      max-width: 500px;
+      position: relative;
+      margin: auto;
+      border-style: solid;
+      border-width: 5px;
+      border-color: black;
+
+      }
+      .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      }
+      .prev {
+      left: 1;
+      border-radius: 3px 0 0 3px;
+      }
+      .next {
+      right: 1;
+      border-radius: 3px 0 0 3px;
+      }
+      .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+      }
+      .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      font:20px verdana, helvetica, sans-serif;
+      }
+      .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+      }
+      .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      }
+
+
+      .active, .dot:hover {
+      background-color: #717171;
+      }
+      .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+
+      @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+      @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+      }
+    </style>
+  </head>
+  <body>
+      <a href="parte3home.html"><img class="iniciar" src="home.png"> </a>
+      <a href="parte3sobre.html"><img class="iniciar" src="perfil.png"> </a>
+      <a href="parte3contato.html"><img class="iniciar" src="agenda.png"> </a>
+
+      <br><br><br> 
+      <div class="texto"><b>Quem sou eu ? </b><br>
+      <br><p>Meu nome é Kenji Yamaguti, tenho 25 anos e sou formado em Engenharia Elétrica. Quando passei no vestibular para  engenharia, passei também em Ciência da Computação, no entanto optei pela engenharia. Após me formar, devido a falta de emprego na área, comecei a trabalhar como suporte técnico em uma empresa de software. Consegui aprender os comandos básicos do SQL (select, delete, update, join) rapidamente, dispertando comentários positivos dos companheiros de trabalho, em relação a virar programador. Sou bem colaborativo e esforçado no trabalho e sempre busco o reconhecimento das pessoas.
+      <br><p>Minha vida pessoal é bem tranquila, gosto de tomar algumas muitas várias cervejas com os amigos de final de semana, não sou baladeiro, curto música eletrônica tanto para sair quanto para me concentrar e me considero uma pessoa bem feliz com a vida. Não falo de religião e nem de política.
+      <br>
+      <br>
+      </div>
+      <div class="slideshow-container">
+
+      <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="kenji2.jpg" style="width:100%">
+      <div class="text">Homem de família</div>
+      </div>
+
+      <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="romantico.jpeg" style="width:100%">
+      <div class="text">Romântico</div>
+      </div>
+
+      <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="sofrencia.jpeg" style="width:100%">
+      <div class="text">Sofredor</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+ 
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+               slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+               dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+      }
+      </script>
+      
+      
+
+
+      <br><br> <a target="_blank" href="https://github.com/kyamaguti"><img class="redes" src="git.png"></a>
+      <a target="_blank" href="http://www.facebook.com/kyamagutii"><img class="redes" src="facebook.png"></a>
+      <a target="_blank" href="http://www.instagram.com/kyamagutii"><img class="redes" src="instagram.png"></a>
+      <a target="_blank" href="https://soundcloud.com/kyamagutii"><img class="redes" src="soundcloud.png" ></a>
+  </body>
+</html>
+  
